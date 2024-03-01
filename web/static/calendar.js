@@ -18,9 +18,11 @@ function createCalendar(month) {
 
     calendarHTML += '</tr></thead><tbody>';
 
+    // 引数で指定された月の日数を取得
     const daysInMonth = new Date(date.getFullYear(), month + 1, 0).getDate();
+    // その月の最初の日の曜日を取得
     const firstDay = new Date(date.getFullYear(), month, 1).getDay();
-
+    // 前月の日数を取得
     const daysInPrevMonth = new Date(date.getFullYear(), month, 0).getDate();
 
     let dayCount = 1;
@@ -64,4 +66,4 @@ function createCalendar(month) {
     return calendarHTML;
 }
 
-document.getElementById('calendar').innerHTML = createCalendar(currentMonth) + createCalendar(currentMonth + 1);
+document.getElementById('calendar').innerHTML = createCalendar(currentMonth);
