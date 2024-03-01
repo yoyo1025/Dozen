@@ -8,10 +8,11 @@ import (
 
 func main() {
 	e := echo.New()
-
+	e.Static("/static", "web/static")
 	// 404ページを表示する関数を実行
 	e.HTTPErrorHandler = customHTTPErrorHandler
-	e.GET("/", getHome)
+	e.GET("/home", getHome)
+	e.GET("/calendar", getCalendar)
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
