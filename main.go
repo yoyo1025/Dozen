@@ -11,12 +11,16 @@ func main() {
 
 	// 404ページを表示する関数を実行
 	e.HTTPErrorHandler = customHTTPErrorHandler
-	e.GET("/", gethome)
+	e.GET("/", getHome)
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
-func gethome(c echo.Context) error {
+func getHome(c echo.Context) error {
 	return c.File("web/template/home.html")
+}
+
+func getCalendar(c echo.Context) error {
+	return c.File("web/template/calendar.html")
 }
 
 // 404ページを表示する関数
