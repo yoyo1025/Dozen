@@ -8,17 +8,25 @@ nav ul {
     margin: 0;
     list-style: none;
     width: 100%;
-    /* 必要に応じて追加 */
+    background-color: #45458e6e;
+    /* 半透明の青色 */
 }
 
-nav li.member {
+nav li {
+    display: flex;
+    align-items: center;
+    /* 中央揃えのためのスタイル */
+}
+
+nav li.auth-links {
     margin-left: auto;
 }
 
 nav a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
+    /* リンクのテキスト色 */
     padding: 20px 15px;
 }
 
