@@ -14,6 +14,7 @@ func main() {
 	e.GET("/home", getHome)
 	e.GET("/calendar", getCalendar)
 	e.GET("/entrance", getEntrance)
+	e.GET("/serviceInfo", getServiceInfo)
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
@@ -27,6 +28,10 @@ func getCalendar(c echo.Context) error {
 
 func getEntrance(c echo.Context) error {
 	return c.File("web/template/entrance.html")
+}
+
+func getServiceInfo(c echo.Context) error {
+	return c.File("web/template/serviceInfo.html")
 }
 
 // 404ページを表示する関数
