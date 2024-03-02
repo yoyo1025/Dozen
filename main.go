@@ -15,6 +15,9 @@ func main() {
 	e.GET("/calendar", getCalendar)
 	e.GET("/entrance", getEntrance)
 	e.GET("/serviceInfo", getServiceInfo)
+	e.GET("/latestRelease", getLatestRelease)
+	e.GET("/termsOfService", getTermsOfService)
+	e.GET("/inquiry", getInquiry)
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
@@ -32,6 +35,18 @@ func getEntrance(c echo.Context) error {
 
 func getServiceInfo(c echo.Context) error {
 	return c.File("web/template/serviceInfo.html")
+}
+
+func getLatestRelease(c echo.Context) error {
+	return c.File("web/template/latestRelease.html")
+}
+
+func getTermsOfService(c echo.Context) error {
+	return c.File("web/template/termsOfService.html")
+}
+
+func getInquiry(c echo.Context) error {
+	return c.File("web/template/inquiry.html")
 }
 
 // 404ページを表示する関数
