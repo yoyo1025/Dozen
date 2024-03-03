@@ -8,7 +8,7 @@ nav ul {
     margin: 0;
     list-style: none;
     width: 100%;
-    background-color: #45458e6e;
+    background-color: #090909;
     /* 半透明の青色 */
 }
 
@@ -25,7 +25,7 @@ nav li.auth-links {
 nav a {
     display: block;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     /* リンクのテキスト色 */
     padding: 20px 15px;
 }
@@ -39,7 +39,7 @@ nav a {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    color: #a90000;
+    color: #eda7a7;
 }
 
 .bg-visible:before {
@@ -53,7 +53,7 @@ nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #e8baba;
     transform: translate(0, 100%);
     transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
     content: '';
@@ -74,14 +74,14 @@ nav a {
 
 .title span:first-child {
     transform: translate(0, 40px);
-    font-size: 55px;
+    font-size: 80px;
     transition-delay: 0.25s;
 }
 
 .title span:last-child {
     margin-top: 18px;
     transform: translate(0, 30px);
-    font-size: 80px;
+    font-size: 90px;
     transition-delay: 0.45s;
 }
 
@@ -93,4 +93,14 @@ nav a {
 /* 基本スタイル */
 body {
     margin: 0;
+}
+
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-image: url(/static/images/entrance.jpeg);
+    background-color: rgba(241, 195, 195, 0.5);
+    background-blend-mode: lighten;
+    min-height: 100vh;
+
 }
