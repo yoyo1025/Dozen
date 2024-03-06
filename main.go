@@ -19,7 +19,10 @@ func main() {
 	e.GET("/latestRelease", getLatestRelease)
 	e.GET("/termsOfService", getTermsOfService)
 	e.GET("/inquiry", getInquiry)
-	e.Logger.Fatal(e.Start(":1323"))
+	e.GET("/signIn", getSignIn)
+	e.GET("/signUp", getSignUp)
+
+	e.Logger.Fatal(e.Start(":8080"))
 }
 
 func getHome(c echo.Context) error {
@@ -48,6 +51,14 @@ func getTermsOfService(c echo.Context) error {
 
 func getInquiry(c echo.Context) error {
 	return c.File("web/template/inquiry.html")
+}
+
+func getSignIn(c echo.Context) error {
+	return c.File("web/template/signIn.html")
+}
+
+func getSignUp(c echo.Context) error {
+	return c.File("web/template/signUp.html")
 }
 
 // 404ページを表示する関数
