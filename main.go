@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/labstack/echo"
 )
 
